@@ -1,0 +1,64 @@
+framework,language,numberOfFiles,contentSize,minRuns,mean,stddev,median,min,max,status,suite,suiteVersion,profile,features,fingerprint,cv,noisy,attempts,user,system,cpuUtilization,peakRssMB,inputMB,outputFiles,outputMB,postsPerSecond,inputMBPerSecond,imageBuildSeconds,failureReason
+zola,rust,100000,5,1,38.77429258616,,38.77429258616,38.77429258616,38.77429258616,ok,GG,1,core,,3f2f1aaf006c,,,1,38.33121474,33.85069007999999,1.862,7195.8,534.74,100008,892.7,2579.0283543610994,13.791031746401682,24.682,
+jekyll,ruby,100000,5,1,85.58468329434,,85.58468329434,85.58468329434,85.58468329434,ok,GG,1,core,,e2d6f2db677c,,,1,67.45540148,17.03304622,0.987,2271.4,534.84,100001,1117.7,1168.4333709115137,6.249219830148867,53.098,
+hugo,go,100000,5,1,152.8375123454,,152.8375123454,152.8375123454,152.8375123454,ok,GG,1,core,,ba134637a49c,,,1,444.92687444,34.41763418,3.136,6700.65,533.54,100003,1231.28,654.2896339087773,3.490880555516043,27.724,
+astro,javascript,100000,5,1,185.43204525834,,185.43204525834,185.43204525834,185.43204525834,ok,GG,1,core,,3f2f1aaf006c,,,1,287.27848894,25.304212019999998,1.686,6705.04,533.54,100001,1042.8,539.2811143331894,2.8772669753854405,43.326,
+bridgetown,ruby,100000,5,1,208.88383344514,,208.88383344514,208.88383344514,208.88383344514,ok,GG,1,core,,8e17af3b158e,,,1,154.15857172,18.36268658,0.826,5468.72,534.84,100004,1113.14,478.73499040443164,2.560454254304302,216.443,
+jigsaw,php,100000,5,1,421.47173552396,,421.47173552396,421.47173552396,421.47173552396,ok,GG,1,core,,3f2f1aaf006c,,,1,355.03920974,58.59230288,0.981,3655.44,535.84,100003,929.9,237.26383425375664,1.2713485978694732,80.944,
+nesta,ruby,100000,5,1,520.60148257068,,520.60148257068,520.60148257068,520.60148257068,ok,GG,1,core,,ebe58c534103,,,1,496.54912699999994,23.9091027,1.0,2532.51,533.54,100006,978.58,192.08550752911734,1.0248482147331646,42.136,
+lektor,python,100000,5,1,548.53439204364,,548.53439204364,548.53439204364,548.53439204364,ok,GG,1,core,,ebe58c534103,,,1,399.97626719999994,92.21238557999999,0.897,1137.84,512.0,100004,831.4,182.3039748290646,0.9333963511248108,41.886,
+franklin,julia,100000,5,1,705.4252630632201,,705.4252630632201,705.4252630632201,705.4252630632201,ok,GG,1,core,,ebe58c534103,,,1,566.31317526,75.08959761999999,0.909,7790.97,512.0,100005,1179.2,141.7584615069818,0.7258033229157469,183.959,
+mkdocs,python,100000,5,1,914.13243051928,,914.13243051928,914.13243051928,914.13243051928,ok,GG,1,core,,ba134637a49c,,,1,901.1146519799998,8.28785514,0.995,2689.75,512.0,100001,904.1,109.3933402441419,0.5600939020500065,43.277,
+middleman,ruby,100000,5,1,936.6345548386801,,936.6345548386801,936.6345548386801,936.6345548386801,ok,GG,1,core,,3f2f1aaf006c,,,1,2762.9268687,69.0669362,3.024,2253.04,533.54,100002,1002.2,106.7652260781937,0.5696325180869428,104.652,
+pelican,python,100000,5,1,1061.88840608338,,1061.88840608338,1061.88840608338,1061.88840608338,ok,GG,1,core,,3f2f1aaf006c,,,1,1043.76207292,18.366798959999997,1.0,1052.87,533.54,100001,744.4,94.17185405464154,0.5024421558267832,44.008,
+antora,javascript,100000,5,1,1209.3338896119799,,1209.3338896119799,1209.3338896119799,1209.3338896119799,ok,GG,1,core,,ebe58c534103,,,1,1305.83344858,22.63882416,1.099,5541.0,512.0,100003,1982.1,82.69014939462703,0.42337356490049033,36.302,
+lustre-ssg,gleam,100000,5,1,1495.9952501188002,,1495.9952501188002,1495.9952501188002,1495.9952501188002,ok,GG,1,core,,de731ab3b8a5,,,1,1568.53238288,67.43666456,1.094,6683.42,533.54,100004,950.04,66.84513202301865,0.3566438462673131,21.902,
+hakyll,haskell,100000,5,1,1669.5932615952,,1669.5932615952,1669.5932615952,1669.5932615952,ok,GG,1,core,,3f2f1aaf006c,,,1,4922.3906632,176.97318538,3.054,5024.98,533.54,100003,1074.9,59.89482726137489,0.31956136399965807,2428.171,
+nikola-mako,python,100000,5,1,2254.69561932568,,2254.69561932568,2254.69561932568,2254.69561932568,ok,GG,1,core,,3f2f1aaf006c,,,1,2169.3097580999997,77.09385834,0.996,3829.9,535.44,100025,861.04,44.35188463705241,0.2374766223035175,51.844,
+publish,swift,100000,5,1,2459.6506999263197,,2459.6506999263197,2459.6506999263197,2459.6506999263197,ok,GG,1,core,,3f2f1aaf006c,,,1,2378.74597904,113.92915624,1.013,2287.73,533.54,100004,947.24,40.65617935221272,0.21691596291131193,135.637,
+nanoc,ruby,100000,5,1,2787.18020747216,,2787.18020747216,2787.18020747216,2787.18020747216,ok,GG,1,core,,2bb7b205c77e,,,1,2734.5516264,32.6471794,0.993,5373.03,535.54,100001,1008.7,35.87855558528641,0.1921431196175532,46.764,
+analog,javascript,100000,5,,,,,,,oom,GG,1,core,,d9fc9f362ed7,,,,,,,,,,,,,63.974,oom
+cecil,php,100000,5,,,,,,,timeout,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,50.094,timeout
+cobalt,rust,100000,5,,,,,,,timeout,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,26.084,timeout
+cryogen,clojure,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,49.917,SSGBERK_VERIFY_FAIL expected=100000 got=0
+docfx,c#,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,48.561,SSGBERK_VERIFY_FAIL build exited 255
+docmd,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,43.556,SSGBERK_VERIFY_FAIL build exited 134
+docusaurus,javascript,100000,5,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,86.511,oom
+dumi,javascript,100000,5,,,,,,,failed,GG,1,core,,ba134637a49c,,,,,,,,,,,,,94.792,SSGBERK_VERIFY_FAIL build exited 134
+eleventy,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,34.957,SSGBERK_VERIFY_FAIL build exited 134
+emanote,haskell,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,3116.963,oom
+gatsby,javascript,100000,5,,,,,,,timeout,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,239.344,timeout
+hexo,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,41.683,SSGBERK_VERIFY_FAIL build exited 134
+iles,javascript,100000,5,,,,,,,failed,GG,1,core,,ebe58c534103,,,,,,,,,,,,,43.094,SSGBERK_VERIFY_FAIL build exited 1
+ink,go,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,56.223,SSGBERK_VERIFY_FAIL build exited 126
+jbake,java,100000,5,,,,,,,failed,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,33.098,SSGBERK_VERIFY_FAIL build exited 134
+laika,scala,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,48.004,SSGBERK_VERIFY_FAIL build exited 1
+lume,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,33.32,SSGBERK_VERIFY_FAIL build exited 133
+marmite,rust,100000,5,,,,,,,oom,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,61.651,oom
+mdbook,rust,100000,5,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,26.373,oom
+metalsmith-handlebars,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,39.961,SSGBERK_VERIFY_FAIL build exited 1
+metalsmith-nunjucks,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,37.614,SSGBERK_VERIFY_FAIL build exited 1
+nextjs-export,javascript,100000,5,,,,,,,failed,GG,1,core,,ba134637a49c,,,,,,,,,,,,,56.008,
+nextra,javascript,100000,5,,,,,,,oom,GG,1,core,,e2d6f2db677c,,,,,,,,,,,,,76.707,oom
+nimib,nim,100000,5,,,,,,,failed,GG,1,core,,32b3f23116a6,,,,,,,,,,,,,75.351,SSGBERK_VERIFY_FAIL build exited 139
+nuxt-content,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,59.685,SSGBERK_VERIFY_FAIL build exited 1
+observable-framework,javascript,100000,5,,,,,,,timeout,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,45.556,timeout
+plenti,go,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,86.807,oom
+quarkdown,kotlin,100000,5,,,,,,,failed,GG,1,core,,c5ccc7094d75,,,,,,,,,,,,,38.412,SSGBERK_VERIFY_FAIL build exited 1
+quarto,typescript,100000,5,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,39.921,oom
+quartz,javascript,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,274.893,oom
+rspress,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,40.854,SSGBERK_VERIFY_FAIL build exited 1
+sculpin,php,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,74.059,oom
+soupault,ocaml,100000,5,,,,,,,oom,GG,1,core,,4f6fd13ef728,,,,,,,,,,,,,30.501,oom
+sphinx,python,100000,5,,,,,,,oom,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,51.408,oom
+starlight,javascript,100000,5,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,51.463,SSGBERK_VERIFY_FAIL build exited 134
+statiq,c#,100000,5,,,,,,,failed,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,64.246,SSGBERK_VERIFY_FAIL build exited 134
+sveltekit,javascript,100000,5,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,37.275,oom
+tableau,elixir,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,82.228,oom
+tanstack-start,javascript,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,44.504,oom
+vike,javascript,100000,5,,,,,,,oom,GG,1,core,,d9fc9f362ed7,,,,,,,,,,,,,41.695,oom
+vite-ssg,javascript,100000,5,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,39.504,oom
+vitepress,javascript,100000,5,,,,,,,failed,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,41.669,SSGBERK_VERIFY_FAIL build exited 134
+vuepress,javascript,100000,5,,,,,,,failed,GG,1,core,,ebe58c534103,,,,,,,,,,,,,44.916,SSGBERK_VERIFY_FAIL build exited 134
+zensical,python,100000,5,,,,,,,timeout,GG,1,core,,ebe58c534103,,,,,,,,,,,,,47.826,timeout
+zine,zig,100000,5,,,,,,,oom,GG,1,core,,c5ccc7094d75,,,,,,,,,,,,,26.009,oom

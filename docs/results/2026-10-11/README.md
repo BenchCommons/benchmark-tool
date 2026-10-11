@@ -1,4 +1,4 @@
-# Benchmark rounds 2026-10-11: suites P and M, 63 generators
+# Benchmark rounds 2026-10-11: suites P, M and GG, 63 generators
 
 All 63 generators of ssg-frameworks on GitHub Actions (`ubuntu-24.04` hosted runners, one runner per generator and cell, `--cpus 4 --memory 8g`, profile `core`, Node generators with `--max-old-space-size=6144`). Suite P also ran the untimed output quality pass (spec 009) in cell nf50-cs5.
 
@@ -6,6 +6,7 @@ All 63 generators of ssg-frameworks on GitHub Actions (`ubuntu-24.04` hosted run
 |---|---|---|---|---|
 | P (website pessoal) | 50 | 5 KB, 50 KB | [38102505695](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102505695) | [P/](./P/) |
 | M (site corporativo) | 1,000 | 5 KB, 50 KB | [38102507250](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102507250) | [M/](./M/) |
+| GG (portal massivo) | 100,000 | 5 KB, 50 KB | [38102510926](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102510926) | [GG/](./GG/) |
 
 ## Caveats
 
@@ -281,3 +282,39 @@ Failed: dumi: no result, the job failed before uploading.
 | sphinx | python | 751.941 | 1.2% | 1 | 7,212 |
 
 Failed: docusaurus: heap (exit 134); dumi: heap (exit 134); marmite: oom (8 GB container); nextra: oom (8 GB container); quarto: timeout; quartz: oom (8 GB container); rspress: oom (8 GB container); statiq: heap (exit 134); vite-ssg: oom (8 GB container); vitepress: heap (exit 134).
+
+## GG: 100,000 pages
+
+### 100,000 pages × 5 KB (18/63 ok)
+
+| Generator | Language | Median (s) | CV | Posts/s | Peak RSS (MB) |
+|---|---|---|---|---|---|
+| zola | rust | 38.774 | — | 2,579 | 7,196 |
+| jekyll | ruby | 85.585 | — | 1,168 | 2,271 |
+| hugo | go | 152.838 | — | 654 | 6,701 |
+| astro | javascript | 185.432 | — | 539 | 6,705 |
+| bridgetown | ruby | 208.884 | — | 479 | 5,469 |
+| jigsaw | php | 421.472 | — | 237 | 3,655 |
+| nesta | ruby | 520.601 | — | 192 | 2,533 |
+| lektor | python | 548.534 | — | 182 | 1,138 |
+| franklin | julia | 705.425 | — | 142 | 7,791 |
+| mkdocs | python | 914.132 | — | 109 | 2,690 |
+| middleman | ruby | 936.635 | — | 107 | 2,253 |
+| pelican | python | 1061.888 | — | 94 | 1,053 |
+| antora | javascript | 1209.334 | — | 83 | 5,541 |
+| lustre-ssg | gleam | 1495.995 | — | 67 | 6,683 |
+| hakyll | haskell | 1669.593 | — | 60 | 5,025 |
+| nikola-mako | python | 2254.696 | — | 44 | 3,830 |
+| publish | swift | 2459.651 | — | 41 | 2,288 |
+| nanoc | ruby | 2787.180 | — | 36 | 5,373 |
+
+Failed: analog: oom (8 GB container); cecil: timeout; cobalt: timeout; cryogen: SSGBERK_VERIFY_FAIL expected=100000 got=0; docfx: SSGBERK_VERIFY_FAIL build exited 255; docmd: heap (exit 134); docusaurus: oom (8 GB container); dumi: heap (exit 134); eleventy: heap (exit 134); emanote: oom (8 GB container); gatsby: timeout; hexo: heap (exit 134); iles: SSGBERK_VERIFY_FAIL build exited 1; ink: SSGBERK_VERIFY_FAIL build exited 126; jbake: heap (exit 134); laika: SSGBERK_VERIFY_FAIL build exited 1; lume: SSGBERK_VERIFY_FAIL build exited 133; marmite: oom (8 GB container); mdbook: oom (8 GB container); metalsmith-handlebars: SSGBERK_VERIFY_FAIL build exited 1; metalsmith-nunjucks: SSGBERK_VERIFY_FAIL build exited 1; nextjs-export: failed; nextra: oom (8 GB container); nimib: SSGBERK_VERIFY_FAIL build exited 139; nuxt-content: SSGBERK_VERIFY_FAIL build exited 1; observable-framework: timeout; plenti: oom (8 GB container); quarkdown: SSGBERK_VERIFY_FAIL build exited 1; quarto: oom (8 GB container); quartz: oom (8 GB container); rspress: SSGBERK_VERIFY_FAIL build exited 1; sculpin: oom (8 GB container); soupault: oom (8 GB container); sphinx: oom (8 GB container); starlight: heap (exit 134); statiq: heap (exit 134); sveltekit: oom (8 GB container); tableau: oom (8 GB container); tanstack-start: oom (8 GB container); vike: oom (8 GB container); vite-ssg: oom (8 GB container); vitepress: heap (exit 134); vuepress: heap (exit 134); zensical: timeout; zine: oom (8 GB container).
+
+### 100,000 pages × 50 KB (2/63 ok)
+
+| Generator | Language | Median (s) | CV | Posts/s | Peak RSS (MB) |
+|---|---|---|---|---|---|
+| hugo | go | 1169.302 | — | 86 | 7,763 |
+| pelican | python | 5932.779 | — | 17 | 7,533 |
+
+Failed: analog: oom (8 GB container); antora: oom (8 GB container); astro: heap (exit 134); bridgetown: oom (8 GB container); cecil: timeout; cobalt: oom (8 GB container); cryogen: SSGBERK_VERIFY_FAIL expected=100000 got=0; docfx: SSGBERK_VERIFY_FAIL build exited 255; docmd: heap (exit 134); docusaurus: SSGBERK_VERIFY_FAIL build exited 1; dumi: heap (exit 134); eleventy: oom (8 GB container); emanote: oom (8 GB container); franklin: oom (8 GB container); gatsby: timeout; hakyll: failed; hexo: oom (8 GB container); iles: SSGBERK_VERIFY_FAIL build exited 1; ink: SSGBERK_VERIFY_FAIL build exited 126; jbake: SSGBERK_VERIFY_FAIL build exited 1; jekyll: oom (8 GB container); jigsaw: oom (8 GB container); laika: SSGBERK_VERIFY_FAIL build exited 1; lektor: failed; lume: SSGBERK_VERIFY_FAIL build exited 133; lustre-ssg: oom (8 GB container); marmite: oom (8 GB container); mdbook: oom (8 GB container); metalsmith-handlebars: SSGBERK_VERIFY_FAIL build exited 1; metalsmith-nunjucks: SSGBERK_VERIFY_FAIL build exited 1; middleman: oom (8 GB container); mkdocs: oom (8 GB container); nanoc: oom (8 GB container); nesta: oom (8 GB container); nextjs-export: failed; nextra: oom (8 GB container); nikola-mako: timeout; nimib: SSGBERK_VERIFY_FAIL build exited 139; nuxt-content: heap (exit 134); observable-framework: timeout; plenti: oom (8 GB container); publish: oom (8 GB container); quarkdown: SSGBERK_VERIFY_FAIL build exited 1; quarto: oom (8 GB container); quartz: oom (8 GB container); rspress: SSGBERK_VERIFY_FAIL build exited 1; sculpin: oom (8 GB container); soupault: oom (8 GB container); sphinx: oom (8 GB container); starlight: heap (exit 134); statiq: SSGBERK_VERIFY_FAIL build exited 1; sveltekit: oom (8 GB container); tableau: oom (8 GB container); tanstack-start: oom (8 GB container); vike: oom (8 GB container); vite-ssg: oom (8 GB container); vitepress: heap (exit 134); vuepress: oom (8 GB container); zensical: timeout; zine: oom (8 GB container); zola: oom (8 GB container).
