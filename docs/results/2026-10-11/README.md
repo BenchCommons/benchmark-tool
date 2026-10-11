@@ -1,4 +1,4 @@
-# Benchmark rounds 2026-10-11: suites P, M and GG, 63 generators
+# Benchmark rounds 2026-10-11: suites P, M, G and GG, 63 generators
 
 All 63 generators of ssg-frameworks on GitHub Actions (`ubuntu-24.04` hosted runners, one runner per generator and cell, `--cpus 4 --memory 8g`, profile `core`, Node generators with `--max-old-space-size=6144`). Suite P also ran the untimed output quality pass (spec 009) in cell nf50-cs5.
 
@@ -6,6 +6,7 @@ All 63 generators of ssg-frameworks on GitHub Actions (`ubuntu-24.04` hosted run
 |---|---|---|---|---|
 | P (website pessoal) | 50 | 5 KB, 50 KB | [38102505695](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102505695) | [P/](./P/) |
 | M (site corporativo) | 1,000 | 5 KB, 50 KB | [38102507250](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102507250) | [M/](./M/) |
+| G (grande portal) | 10,000 | 5 KB, 50 KB | [38102508908](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102508908) | [G/](./G/) |
 | GG (portal massivo) | 100,000 | 5 KB, 50 KB | [38102510926](https://github.com/BenchCommons/benchmark-tool/actions/runs/38102510926) | [GG/](./GG/) |
 
 ## Caveats
@@ -282,6 +283,100 @@ Failed: dumi: no result, the job failed before uploading.
 | sphinx | python | 751.941 | 1.2% | 1 | 7,212 |
 
 Failed: docusaurus: heap (exit 134); dumi: heap (exit 134); marmite: oom (8 GB container); nextra: oom (8 GB container); quarto: timeout; quartz: oom (8 GB container); rspress: oom (8 GB container); statiq: heap (exit 134); vite-ssg: oom (8 GB container); vitepress: heap (exit 134).
+
+## G: 10,000 pages
+
+### 10,000 pages × 5 KB (50/63 ok)
+
+| Generator | Language | Median (s) | CV | Posts/s | Peak RSS (MB) |
+|---|---|---|---|---|---|
+| zola | rust | 2.596 | 0.8% | 3,852 | 752 |
+| zine | zig | 4.683 | 1.1% | 2,135 | 2,291 |
+| hugo | go | 7.407 | 2.3% | 1,350 | 4,005 |
+| jekyll | ruby | 8.190 | 0.8% | 1,221 | 321 |
+| metalsmith-nunjucks | javascript | 9.528 | 0.1% | 1,050 | 642 |
+| ink | go | 11.473 | 0.2% | 872 | 1,380 |
+| metalsmith-handlebars | javascript | 13.962 | 0.6% | 716 | 664 |
+| eleventy | javascript | 15.157 | 0.3% | 660 | 1,312 |
+| astro | javascript | 17.066 | 0.6% | 586 | 1,368 |
+| bridgetown | ruby | 18.527 | 1.0% | 540 | 643 |
+| jigsaw | php | 21.645 | 0.6% | 462 | 403 |
+| tanstack-start | javascript | 23.646 | 0.4% | 423 | 2,154 |
+| hexo | javascript | 25.250 | 0.2% | 396 | 4,552 |
+| lume | javascript | 27.746 | 0.8% | 360 | 1,005 |
+| docfx | c# | 32.969 | 2.2% | 303 | 1,114 |
+| publish | swift | 33.423 | 0.4% | 299 | 251 |
+| quarkdown | kotlin | 45.939 | 1.4% | 218 | 1,948 |
+| soupault | ocaml | 48.069 | 0.3% | 208 | 3,766 |
+| nextjs-export | javascript | 49.376 | 4.1% | 203 | 1,396 |
+| sculpin | php | 50.081 | 0.6% | 200 | 1,077 |
+| laika | scala | 51.619 | 2.1% | 194 | 3,972 |
+| lustre-ssg | gleam | 52.681 | 2.3% | 190 | 754 |
+| vike | javascript | 52.813 | 0.8% | 189 | 3,798 |
+| starlight | javascript | 53.025 | 0.9% | 189 | 2,382 |
+| mkdocs | python | 66.540 | 1.1% | 150 | 297 |
+| franklin | julia | 67.316 | 0.9% | 149 | 1,496 |
+| cryogen | clojure | 69.133 | 0.7% | 145 | 2,506 |
+| middleman | ruby | 76.363 | 0.5% | 131 | 315 |
+| nesta | ruby | 76.962 | 1.3% | 130 | 308 |
+| lektor | python | 78.635 | 0.8% | 127 | 165 |
+| pelican | python | 82.245 | 1.2% | 122 | 142 |
+| nanoc | ruby | 94.997 | 1.1% | 105 | 639 |
+| cobalt | rust | 95.680 | 1.4% | 105 | 464 |
+| hakyll | haskell | 112.856 | 0.9% | 89 | 866 |
+| antora | javascript | 143.387 | 1.3% | 70 | 1,233 |
+| cecil | php | 151.780 | 1.8% | 66 | 471 |
+| gatsby | javascript | 169.280 | 7.9% | 59 | 1,658 |
+| nikola-mako | python | 185.160 | 0.3% | 54 | 439 |
+| quartz | javascript | 272.592 | 0.6% | 37 | 6,412 |
+| mdbook | rust | 285.300 | 0.9% | 35 | 1,629 |
+| zensical | python | 362.741 | 1.0% | 28 | 1,565 |
+| tableau | elixir | 426.322 | 6.3% | 23 | 2,150 |
+| analog | javascript | 488.353 | 1.6% | 20 | 7,061 |
+| emanote | haskell | 497.757 | 0.3% | 20 | 5,837 |
+| sveltekit | javascript | 515.384 | 0.4% | 19 | 5,964 |
+| jbake | java | 633.294 | 1.7% | 16 | 1,297 |
+| nuxt-content | javascript | 637.575 | 0.3% | 16 | 5,736 |
+| sphinx | python | 641.026 | 0.1% | 16 | 6,897 |
+| docmd | javascript | 994.572 | 0.8% | 10 | 4,394 |
+| plenti | go | 2563.933 | 0.1% | 4 | 2,440 |
+
+Failed: docusaurus: heap (exit 134); dumi: heap (exit 134); iles: oom (8 GB container); marmite: oom (8 GB container); nextra: oom (8 GB container); nimib: timeout; observable-framework: timeout; quarto: oom (8 GB container); rspress: oom (8 GB container); statiq: heap (exit 134); vite-ssg: oom (8 GB container); vitepress: heap (exit 134); vuepress: oom (8 GB container).
+
+### 10,000 pages × 50 KB (28/63 ok)
+
+| Generator | Language | Median (s) | CV | Posts/s | Peak RSS (MB) |
+|---|---|---|---|---|---|
+| jekyll | ruby | 14.292 | 0.7% | 700 | 1,410 |
+| zola | rust | 14.804 | 7.0% | 676 | 6,068 |
+| bridgetown | ruby | 20.243 | 4.8% | 494 | 2,854 |
+| metalsmith-handlebars | javascript | 47.747 | 0.8% | 209 | 2,327 |
+| astro | javascript | 87.953 | 1.9% | 114 | 5,758 |
+| metalsmith-nunjucks | javascript | 88.368 | 0.3% | 113 | 2,318 |
+| hugo | go | 99.940 | 0.3% | 100 | 7,693 |
+| nextjs-export | javascript | 104.177 | 1.4% | 96 | 1,358 |
+| nesta | ruby | 119.490 | 1.2% | 84 | 1,397 |
+| cobalt | rust | 154.325 | 0.0% | 65 | 2,637 |
+| publish | swift | 210.480 | 0.2% | 48 | 1,405 |
+| jigsaw | php | 238.211 | 0.1% | 42 | 1,152 |
+| sculpin | php | 275.952 | 0.9% | 36 | 5,032 |
+| lektor | python | 429.880 | 2.5% | 23 | 772 |
+| lustre-ssg | gleam | 439.031 | 1.0% | 23 | 2,118 |
+| middleman | ruby | 514.924 | 0.4% | 19 | 854 |
+| nanoc | ruby | 530.778 | 2.1% | 19 | 3,489 |
+| tableau | elixir | 591.956 | 0.2% | 17 | 3,412 |
+| jbake | java | 634.867 | 1.6% | 16 | 4,110 |
+| pelican | python | 704.811 | 0.7% | 14 | 790 |
+| hakyll | haskell | 712.828 | 0.1% | 14 | 2,715 |
+| mkdocs | python | 848.288 | 4.3% | 12 | 2,553 |
+| franklin | julia | 941.351 | 0.6% | 11 | 5,678 |
+| antora | javascript | 1065.845 | 2.6% | 9 | 3,610 |
+| cecil | php | 1118.473 | 2.9% | 9 | 2,407 |
+| docfx | c# | 1161.752 | 1.2% | 9 | 6,548 |
+| nikola-mako | python | 1730.766 | 0.8% | 6 | 448 |
+| gatsby | javascript | 1938.542 | 1.0% | 5 | 4,094 |
+
+Failed: analog: oom (8 GB container); cryogen: SSGBERK_VERIFY_FAIL expected=10000 got=0; docmd: heap (exit 134); docusaurus: heap (exit 134); dumi: heap (exit 134); eleventy: heap (exit 134); emanote: oom (8 GB container); hexo: heap (exit 134); iles: oom (8 GB container); ink: oom (8 GB container); laika: SSGBERK_VERIFY_FAIL build exited 1; lume: SSGBERK_VERIFY_FAIL build exited 133; marmite: oom (8 GB container); mdbook: oom (8 GB container); nextra: oom (8 GB container); nimib: timeout; nuxt-content: SSGBERK_VERIFY_FAIL build exited 1; observable-framework: timeout; plenti: SSGBERK_VERIFY_FAIL build exited 2; quarkdown: SSGBERK_VERIFY_FAIL build exited 1; quarto: oom (8 GB container); quartz: oom (8 GB container); rspress: oom (8 GB container); soupault: oom (8 GB container); sphinx: oom (8 GB container); starlight: heap (exit 134); statiq: heap (exit 134); sveltekit: oom (8 GB container); tanstack-start: SSGBERK_VERIFY_FAIL build exited 1; vike: SSGBERK_VERIFY_FAIL build exited 1; vite-ssg: oom (8 GB container); vitepress: heap (exit 134); vuepress: heap (exit 134); zensical: oom (8 GB container); zine: oom (8 GB container).
 
 ## GG: 100,000 pages
 
