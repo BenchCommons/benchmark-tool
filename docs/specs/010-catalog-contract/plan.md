@@ -50,9 +50,9 @@ CA (illustrative; CA 011 decides the real paths):
   "contractVersion": 1,
   "name": "algorithms",
   "testTypes": ["algorithm"],
-  "implementations": "algorithms/*/*",
+  "implementations": "languages/*/*",
   "runner": {"file": "run.sh", "canonical": "tools/run.sh"},
-  "metadata": {"file": "implementation.json", "schema": "schema/implementation.schema.json"},
+  "metadata": {"file": "meta.json", "schema": "schema/implementation.schema.json"},
   "index": {"file": "implementations.json", "key": "implementations", "check": "python3 tools/build_index.py --check"}
 }
 ```
@@ -153,7 +153,7 @@ Cell keys are validated against the test type's declared parameters.
 
 ## Decisions
 
-1. **A manifest file, not a convention.** Layouts already differ (`*/*`, `algorithms/*/*`, `frameworks/*/*`) and the runner and metadata file names differ. One small `catalog.json` states them; BT keeps a built-in CS manifest only until CS adds its own (spec, Migration step 5).
+1. **A manifest file, not a convention.** Layouts already differ (`*/*`, `languages/*/*`, `frameworks/*/*`) and the runner and metadata file names differ. One small `catalog.json` states them; BT keeps a built-in CS manifest only until CS adds its own (spec, Migration step 5).
 2. **Byte-identical runner copies, not a shared file.** The Docker build context is the implementation directory (R-3), so a shared script cannot be `COPY`ed without widening every context. CS already works this way and checks it with `cmp`.
 3. **Prefix `BENCH_`.** Short, catalog-neutral, and not an org name that may change again. `SSGBERK_` stays as an alias for the whole `contractVersion: 1`.
 4. **`http` has no runner.** A server cannot time itself; the load generator must run in another container, as in TechEmpower. Verification for `http` is BT's job, so the same `VERIFY_*` markers are written by BT and parsed by the same code.
@@ -165,7 +165,7 @@ Cell keys are validated against the test type's declared parameters.
 
 1. **Alias normalization changes a CS result.** The rewrite must touch only line-initial `SSGBERK_`, never JSON content between the result markers (a generator name or path containing `SSGBERK_` inside the hyperfine JSON command string). Pinned in Task 3 (`test_alias_inside_json_untouched`).
 2. **`FWROOT/frameworks` is assumed in several places** (`benchmark_config.py` `lang_root`, `metadata.py`, `audit.py`, `github_actions_diff.py`, `scaffolding.py`, `run-tests.py`). Task 4 replaces every path use with `catalog.root`; afterwards `grep -rn "frameworks" toolset` shows no path built from it except the built-in default manifest (the word may remain in log text and results keys such as `frameworks` lists).
-3. **Glob depth differs per catalog.** `metadata.gather_tests` and `--test-lang` assume `<Lang>/<id>`. For `algorithms/*/*` the language is the metadata `language` field, not a path segment. Pinned in Task 4 (`test_gather_tests_algorithms_layout`).
+3. **Glob depth differs per catalog.** `metadata.gather_tests` and `--test-lang` assume `<Lang>/<id>`. For `languages/*/*` the language is the parent path segment and the algorithm the leaf (CA spec 011); language-level metadata lives in `languages/<lang>/language.json`. Pinned in Task 4 (`test_gather_tests_algorithms_layout`).
 4. **Checker false positives on CS today.** `check_catalog.py` must pass on the current CS default branch with only `catalog.json` added (goal 1). Task 2 runs it against a CS checkout in CI.
 
 ## File structure
