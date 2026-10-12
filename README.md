@@ -40,7 +40,7 @@ The command looks like this: `docker run -i [-t] --rm --network ssgberk -v /var/
 - `--rm` tells docker to remove the container as soon as the toolset finishes running, meaning there aren't hundreds of stopped containers lying around.
 - `--network=ssgberk` tells the container to join the 'ssgberk' Docker virtual network
 - The first `-v` specifies which Docker socket path to mount as a volume in the running container. This allows docker commands run inside this container to use the host container's docker to create/run/stop/remove containers.
-- The second `-v` mounts the benchmark-tool source directory (at `/FrameworkBenchmarks` inside the container) as a volume to share with the container so that rebuilding the toolset image is unnecessary and any changes you make on the host system are available in the running toolset container.
+- The second `-v` mounts the tools-benchmark source directory (at `/FrameworkBenchmarks` inside the container) as a volume to share with the container so that rebuilding the toolset image is unnecessary and any changes you make on the host system are available in the running toolset container.
 - `ssgberk/toolset` is the name of toolset container to run
 
 #### A note on Windows:
@@ -60,7 +60,7 @@ required.
 
 2. Change directories
 
-        $ cd benchmark-tool/deployment/vagrant
+        $ cd tools-benchmark/deployment/vagrant
 
 3. Build the vagrant virtual machine
 
@@ -284,7 +284,7 @@ O comando tem esta forma: `docker run -i [-t] --rm --network ssgberk -v /var/run
 - `--rm` diz ao Docker para remover o container assim que o toolset terminar de executar, evitando centenas de containers parados acumulados.
 - `--network=ssgberk` diz ao container para entrar na rede virtual 'ssgberk' do Docker.
 - O primeiro `-v` define qual caminho do socket do Docker será montado como volume no container em execução. Isso permite que os comandos docker executados dentro deste container usem o Docker do host para criar, executar, parar e remover containers.
-- O segundo `-v` monta o diretório do código-fonte do benchmark-tool (em `/FrameworkBenchmarks` dentro do container) como volume compartilhado com o container. Assim, não é preciso reconstruir a imagem do toolset, e qualquer alteração feita no host fica disponível no container do toolset em execução.
+- O segundo `-v` monta o diretório do código-fonte do tools-benchmark (em `/FrameworkBenchmarks` dentro do container) como volume compartilhado com o container. Assim, não é preciso reconstruir a imagem do toolset, e qualquer alteração feita no host fica disponível no container do toolset em execução.
 - `ssgberk/toolset` é o nome do container do toolset a ser executado.
 
 #### Uma nota sobre o Windows:
@@ -303,7 +303,7 @@ o [Virtualbox](https://www.virtualbox.org/) e o [Vagrant](https://www.vagrantup.
 
 2. Entre no diretório
 
-        $ cd benchmark-tool/deployment/vagrant
+        $ cd tools-benchmark/deployment/vagrant
 
 3. Crie a máquina virtual do Vagrant
 
