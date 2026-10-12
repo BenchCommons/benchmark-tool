@@ -14,7 +14,7 @@ BT measures one catalog, and assumes SSG semantics everywhere:
 | Item | Today | Problem for other catalogs |
 |---|---|---|
 | Catalog source | one submodule, `frameworks/` → `ssg-frameworks` (now CS) | no way to point at CA or CW |
-| Layout | `<Lang>/<id>/` with `<id>.dockerfile`, `build.sh`, `benchmark_config.json`, `generator.json` | CA plans `algorithms/<algo>/<lang>/`; CW inherits TechEmpower's `frameworks/<Lang>/<id>/` |
+| Layout | `<Lang>/<id>/` with `<id>.dockerfile`, `build.sh`, `benchmark_config.json`, `generator.json` | CA uses `languages/<lang>/<algorithm>/` (CA spec 011); CW inherits TechEmpower's `frameworks/<Lang>/<id>/` |
 | Runner | `build.sh`, byte-identical in every generator, checked by CS `tools/check-build-sh.sh` | the rule is only written down in CS |
 | Metadata | `generator.json` + `schema/generator.schema.json`; index `generators.json` built by CS `tools/build_index.py --check` | CA has `meta.json`; no shared base fields |
 | Test type | only `datarate` (`numberOfFiles`, `contentSize`) | CA needs input size `n`; CW needs HTTP endpoints |
@@ -39,7 +39,7 @@ TechEmpower solved the same problem for web frameworks: a per-implementation `be
   - `contractVersion` (integer, this spec defines `1`);
   - `name` (`ssg`, `algorithms`, `web-frameworks`);
   - `testTypes`: the test types the catalog uses, from R-12;
-  - `implementations`: a glob, relative to the root, that matches every implementation directory (`*/*` for CS, `algorithms/*/*` for CA, `frameworks/*/*` for CW);
+  - `implementations`: a glob, relative to the root, that matches every implementation directory (`*/*` for CS, `languages/*/*` for CA, `frameworks/*/*` for CW);
   - `runner`: `{ "file": "<name>", "canonical": "<path>" }`, the per-implementation runner file name and the reference copy (CS: `build.sh`, `Go/hugo/build.sh`). `file` is omitted for `http`-only catalogs (R-6);
   - `metadata`: `{ "file": "<name>", "schema": "<path>" }` (CS: `generator.json`, `schema/generator.schema.json`);
   - `index`: `{ "file": "<path>", "key": "<array key>", "check": "<command>" }` (CS: `generators.json`, `generators`, `python3 tools/build_index.py --check`).
@@ -54,7 +54,7 @@ TechEmpower solved the same problem for web frameworks: a per-implementation `be
   - the runner file, unless the catalog is `http`-only (R-5, R-6);
   - `src/` or other inputs the Dockerfile copies. No file outside the directory is read at build time; the build context is the directory.
 
-  `<id>` is the directory name. It matches `^[a-z0-9][a-z0-9._-]*$` and is unique in the catalog. CA's `algorithms/<algo>/<lang>/` uses the id `<algo>-<lang>` through the metadata `id` field; R-11 checks the two agree.
+  `<id>` is the directory name. It matches `^[a-z0-9][a-z0-9._-]*$` and is unique in the catalog. In CA's `languages/<lang>/<algorithm>/` the leaf name repeats across languages (every language has `hello-world`), so CA's id is `<lang>.<algorithm>` (e.g. `python.hello-world`) through the metadata `id` field; R-11 checks it equals the parent and leaf directory names joined by a dot.
 - **R-4** The Dockerfile is **pinned**:
   - the base image names an exact tag (`ubuntu:24.04`, `node:24.11.0-bookworm-slim`), never `latest` or a bare name; a digest (`@sha256:`) is recommended and, when absent, BT records the resolved digest in `results.json` (BT 008, unchanged);
   - every downloaded tool, toolchain and engine is installed at an exact version, set by an `ARG <NAME>_VERSION=` line (CS `hugo.dockerfile`: `HYPERFINE_VERSION`, `HUGO_VERSION`);
