@@ -1,4 +1,4 @@
-# AGENTS.md — benchmark-tool
+# AGENTS.md — tools-benchmark
 
 Follow the org-wide rules in [BenchCommons/.github AGENTS.md](https://github.com/BenchCommons/.github/blob/main/AGENTS.md) and the decisions in [.product](https://github.com/BenchCommons/.product). This file only adds what is specific to this repo.
 
@@ -13,4 +13,4 @@ Tool: builds each catalog implementation in Docker, runs it and records reproduc
 - Specs and their order: `docs/specs/` (see `ROADMAP.md`).
 
 ## Rules
-- Generalizing beyond SSGs (benchmark-tool#29) and switching to perfratio (#30) are tracked in issues. Do not hard-code new SSG-only assumptions.
+- Generalizing beyond SSGs (tools-benchmark#29) and switching to perfratio (#30) are tracked in issues. Do not hard-code new SSG-only assumptions.
