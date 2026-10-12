@@ -1,0 +1,64 @@
+framework,language,numberOfFiles,contentSize,minRuns,mean,stddev,median,min,max,status,suite,suiteVersion,profile,features,fingerprint,cv,noisy,attempts,user,system,cpuUtilization,peakRssMB,inputMB,outputFiles,outputMB,postsPerSecond,inputMBPerSecond,imageBuildSeconds,failureReason
+hugo,go,100000,50,1,1169.30214150844,,1169.30214150844,1169.30214150844,1169.30214150844,ok,GG,1,core,,3f2f1aaf006c,,,1,4286.70285532,66.02912364,3.723,7762.94,5141.54,100003,11437.28,85.52109540396168,4.397099190605467,24.961,
+pelican,python,100000,50,1,5932.7787648659,,5932.7787648659,5932.7787648659,5932.7787648659,ok,GG,1,core,,8e17af3b158e,,,1,5590.84198844,34.75207792,0.948,7533.03,5141.54,100001,7224.4,16.85550801122117,0.8666322652124406,56.307,
+analog,javascript,100000,50,,,,,,,oom,GG,1,core,,fe92e3e10f7a,,,,,,,,,,,,,64.351,oom
+antora,javascript,100000,50,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,40.874,oom
+astro,javascript,100000,50,,,,,,,failed,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,51.745,SSGBERK_VERIFY_FAIL build exited 134
+bridgetown,ruby,100000,50,,,,,,,oom,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,200.775,oom
+cecil,php,100000,50,,,,,,,timeout,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,50.705,timeout
+cobalt,rust,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,23.577,oom
+cryogen,clojure,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,38.367,SSGBERK_VERIFY_FAIL expected=100000 got=0
+docfx,c#,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,48.043,SSGBERK_VERIFY_FAIL build exited 255
+docmd,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,41.556,SSGBERK_VERIFY_FAIL build exited 134
+docusaurus,javascript,100000,50,,,,,,,failed,GG,1,core,,ba134637a49c,,,,,,,,,,,,,106.158,SSGBERK_VERIFY_FAIL build exited 1
+dumi,javascript,100000,50,,,,,,,failed,GG,1,core,,2bb7b205c77e,,,,,,,,,,,,,92.286,SSGBERK_VERIFY_FAIL build exited 134
+eleventy,javascript,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,32.162,oom
+emanote,haskell,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,3388.64,oom
+franklin,julia,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,243.354,oom
+gatsby,javascript,100000,50,,,,,,,timeout,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,236.51,timeout
+hakyll,haskell,100000,50,,,,,,,failed,GG,1,core,,ebe58c534103,,,,,,,,,,,,,1671.304,
+hexo,javascript,100000,50,,,,,,,oom,GG,1,core,,ba134637a49c,,,,,,,,,,,,,43.817,oom
+iles,javascript,100000,50,,,,,,,failed,GG,1,core,,90616b2b906d,,,,,,,,,,,,,46.512,SSGBERK_VERIFY_FAIL build exited 1
+ink,go,100000,50,,,,,,,failed,GG,1,core,,ba134637a49c,,,,,,,,,,,,,63.995,SSGBERK_VERIFY_FAIL build exited 126
+jbake,java,100000,50,,,,,,,failed,GG,1,core,,ebe58c534103,,,,,,,,,,,,,38.966,SSGBERK_VERIFY_FAIL build exited 1
+jekyll,ruby,100000,50,,,,,,,oom,GG,1,core,,fe92e3e10f7a,,,,,,,,,,,,,47.369,oom
+jigsaw,php,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,82.243,oom
+laika,scala,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,44.852,SSGBERK_VERIFY_FAIL build exited 1
+lektor,python,100000,50,,,,,,,failed,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,58.22,
+lume,javascript,100000,50,,,,,,,failed,GG,1,core,,2bb7b205c77e,,,,,,,,,,,,,48.087,SSGBERK_VERIFY_FAIL build exited 133
+lustre-ssg,gleam,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,24.605,oom
+marmite,rust,100000,50,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,57.772,oom
+mdbook,rust,100000,50,,,,,,,oom,GG,1,core,,fe92e3e10f7a,,,,,,,,,,,,,29.888,oom
+metalsmith-handlebars,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,35.176,SSGBERK_VERIFY_FAIL build exited 1
+metalsmith-nunjucks,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,36.15,SSGBERK_VERIFY_FAIL build exited 1
+middleman,ruby,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,107.893,oom
+mkdocs,python,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,37.648,oom
+nanoc,ruby,100000,50,,,,,,,oom,GG,1,core,,e2d6f2db677c,,,,,,,,,,,,,44.943,oom
+nesta,ruby,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,47.769,oom
+nextjs-export,javascript,100000,50,,,,,,,failed,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,55.267,
+nextra,javascript,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,76.97,oom
+nikola-mako,python,100000,50,,,,,,,timeout,GG,1,core,,ebe58c534103,,,,,,,,,,,,,48.508,timeout
+nimib,nim,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,63.421,SSGBERK_VERIFY_FAIL build exited 139
+nuxt-content,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,57.261,SSGBERK_VERIFY_FAIL build exited 134
+observable-framework,javascript,100000,50,,,,,,,timeout,GG,1,core,,90616b2b906d,,,,,,,,,,,,,46.967,timeout
+plenti,go,100000,50,,,,,,,oom,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,92.949,oom
+publish,swift,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,131.424,oom
+quarkdown,kotlin,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,33.06,SSGBERK_VERIFY_FAIL build exited 1
+quarto,typescript,100000,50,,,,,,,oom,GG,1,core,,8e17af3b158e,,,,,,,,,,,,,44.854,oom
+quartz,javascript,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,265.208,oom
+rspress,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,42.132,SSGBERK_VERIFY_FAIL build exited 1
+sculpin,php,100000,50,,,,,,,oom,GG,1,core,,ebe58c534103,,,,,,,,,,,,,65.592,oom
+soupault,ocaml,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,29.647,oom
+sphinx,python,100000,50,,,,,,,oom,GG,1,core,,a61b0287f1ae,,,,,,,,,,,,,49.411,oom
+starlight,javascript,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,45.387,SSGBERK_VERIFY_FAIL build exited 134
+statiq,c#,100000,50,,,,,,,failed,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,76.556,SSGBERK_VERIFY_FAIL build exited 1
+sveltekit,javascript,100000,50,,,,,,,oom,GG,1,core,,ba134637a49c,,,,,,,,,,,,,39.02,oom
+tableau,elixir,100000,50,,,,,,,oom,GG,1,core,,c5ccc7094d75,,,,,,,,,,,,,83.245,oom
+tanstack-start,javascript,100000,50,,,,,,,oom,GG,1,core,,ae30efe0efb4,,,,,,,,,,,,,45.88,oom
+vike,javascript,100000,50,,,,,,,oom,GG,1,core,,ba134637a49c,,,,,,,,,,,,,39.368,oom
+vite-ssg,javascript,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,38.195,oom
+vitepress,javascript,100000,50,,,,,,,failed,GG,1,core,,ba134637a49c,,,,,,,,,,,,,45.575,SSGBERK_VERIFY_FAIL build exited 134
+vuepress,javascript,100000,50,,,,,,,oom,GG,1,core,,3f2f1aaf006c,,,,,,,,,,,,,56.034,oom
+zensical,python,100000,50,,,,,,,timeout,GG,1,core,,90616b2b906d,,,,,,,,,,,,,51.293,timeout
+zine,zig,100000,50,,,,,,,oom,GG,1,core,,ba134637a49c,,,,,,,,,,,,,30.053,oom
+zola,rust,100000,50,,,,,,,oom,GG,1,core,,2bb7b205c77e,,,,,,,,,,,,,28.63,oom
